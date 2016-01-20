@@ -1,6 +1,6 @@
  <div class="container">
  <%= @tasks.each do  |task|%>
- <p class="title"> <%=task.name%></p>
+ <p class="title"> <%= task.name.to_s%></p>
  <% end  %>
 
  </div>
