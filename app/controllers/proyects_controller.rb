@@ -6,11 +6,14 @@ class ProyectsController < ApplicationController
   def index
     @proyects = Proyect.all
     @tasks = Task.all
+
   end
 
   # GET /proyects/1
   # GET /proyects/1.json
   def show
+    @proyect =Proyect.find(params[:id])
+    @tasks = @proyect.tasks
   end
 
   # GET /proyects/new
