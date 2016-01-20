@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  resources :tasks
   resources :proyects
   resources :proyects
   devise_for :users
