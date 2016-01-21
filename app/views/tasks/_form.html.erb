@@ -17,7 +17,8 @@
   </div>
   <div class="field">
     <%= f.label :state %><br>
-    <%= f.text_field :state  %>
+   <%#f.select(:state, Task.states.map {|states| [states , states] }  ) %>
+   <%= f.select(:state, Task.states.keys.map {|state| [state.titleize,state]}) %>
   </div>
   <div class="field">
     <%= f.label :user_id %><br>
