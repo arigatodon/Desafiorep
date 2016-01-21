@@ -8,7 +8,9 @@ class ApplicationController < ActionController::Base
    devise_parameter_sanitizer.for(:sign_up) << [:photo]
   end
   
-
+  def after_sign_in_path_for(resource)
+  	proyects_path
+  end
   
 end
 
