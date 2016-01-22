@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Proyects</h1>
+<h1 class="container"> Lista de Proyectos</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>name</th>
-      <th>User</th>
+      <th>nombre</th>
+      <th>Usuario</th>
       <th>tareas pendientes</th>
-
+      <th>Opciones</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,9 +21,9 @@
       
         <td><%= proyect.tasks.to_do.count %></td>
         
-        <td><%= link_to 'Show', proyect %></td>
-        <td><%= link_to 'Edit', edit_proyect_path(proyect) %></td>
-        <td><%= link_to 'Destroy', proyect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'detalle', proyect %> 
+        <%= link_to ' Editar', edit_proyect_path(proyect) %>
+        <%= link_to ' Borrar', proyect, method: :delete, data: { confirm: 'Estas seguro ?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Proyect', new_proyect_path %>
+<h5 class="container">  <%= link_to 'Nuevo proyecto', new_proyect_path %> </h3>
