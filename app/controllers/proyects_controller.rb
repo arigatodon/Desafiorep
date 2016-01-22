@@ -5,8 +5,9 @@ class ProyectsController < ApplicationController
   # GET /proyects.json
   def index
     @proyects = Proyect.all
-    @tasks = Task.all
-
+   
+      @tasks = Task.all
+   
   end
 
   # GET /proyects/1
