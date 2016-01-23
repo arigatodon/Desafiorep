@@ -1,7 +1,29 @@
- <div class="container row">
- <%  @task.each do |sk| %>
- 	<div class="col-md-6"> <%=sk.name%></div>
- 	</div><% end  %>
+
+<div class="row">
+ 	<div class="col-md-4">
+ 		<p class="rojo">Pendiente</p>
+ 		<% @taskp.each do |sk| %>
+ 		<div class="container">
+ 			<%= sk.name %>
+ 		</div>
+		<% end %>
+	</div>
+	<div class="col-md-4">
+		<p class="verde">Realizando</p>
+		<% @taskr.each do |sk| %>
+		<div class="container">
+ 			<%=sk.name %>	
+ 		</div>
+		<% end %>
+	</div>
+	<div class="col-md-4">
+		<p class="azul">Terminado</p>
+		<% @taskt.each do |sk| %>
+		<div class="container">
+ 			<%=sk.name %>
+ 		</div>
+		<% end %>
+	</div>
+</div>
 
 
- </div>

@@ -16,3 +16,12 @@
 h1.container{
 text-align: center;
 }
+.rojo{
+	background-color: rgba(215, 44, 44, 0.4);
+}
+.verde{
+	background-color: rgba(89, 163, 44, 0.6);
+}
+.azul{
+	background-color: rgba(2, 46, 249, 0.6);
+}

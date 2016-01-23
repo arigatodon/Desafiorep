@@ -12,9 +12,11 @@ class ProyectsController < ApplicationController
   # GET /proyects/1.json
   def show
     @proyect =Proyect.find(params[:id])
-    @task = @proyect.tasks
+    @taskp = @proyect.tasks.pendiente
+    @taskr = @proyect.tasks.realizando
+    @taskt = @proyect.tasks.terminada
   end
-  
+
   # GET /proyects/new
   def new
     @proyect = Proyect.new
