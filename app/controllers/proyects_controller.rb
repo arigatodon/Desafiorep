@@ -5,18 +5,16 @@ class ProyectsController < ApplicationController
   # GET /proyects.json
   def index
     @proyects = Proyect.all
-   
-      @tasks = Task.all
-   
+    @tasks = Task.all
   end
 
   # GET /proyects/1
   # GET /proyects/1.json
   def show
     @proyect =Proyect.find(params[:id])
-    @tasks = @proyect.tasks
+    @task = @proyect.tasks
   end
-
+  
   # GET /proyects/new
   def new
     @proyect = Proyect.new

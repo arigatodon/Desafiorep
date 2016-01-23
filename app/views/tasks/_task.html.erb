@@ -1,6 +1,7 @@
- <div class="container">
- <%= @tasks.each do  |task|%>
- <p class="title"> <%= task.name.to_s%></p>
- <% end  %>
+ <div class="container row">
+ <%  @task.each do |sk| %>
+ 	<div class="col-md-6"> <%=sk.name%></div>
+ 	</div><% end  %>
+
 
  </div>

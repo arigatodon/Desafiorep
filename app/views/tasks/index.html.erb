@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Tasks</h1>
+<h1 class="container">Lista de tareas</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>State</th>
-      <th>User</th>
-      <th>Proyect</th>
+      <th>nombre</th>
+      <th>Estado</th>
+      <th>Usuario</th>
+      <th>Proyecto</th>
+      <th>Opciones</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,9 +21,9 @@
         <td><%= task.state %></td>
         <td><%= task.user %></td>
         <td><%= task.proyect %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'detalle', task %>
+        <%= link_to 'editar', edit_task_path(task) %>
+        <%= link_to 'borrar', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -19,7 +19,7 @@
         <td><%= link_to proyect.name, proyect %></td>
         <td><%= proyect.user.to_s %></td>
       
-        <td><%= proyect.tasks.to_do.count %></td>
+        <td><%= proyect.tasks.pendiente.count %></td>
         
         <td><%= link_to 'detalle', proyect %> 
         <%= link_to ' Editar', edit_proyect_path(proyect) %>
